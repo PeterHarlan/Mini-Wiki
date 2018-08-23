@@ -1,0 +1,123 @@
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 8
+
+Doing OLTP test.
+Running mixed OLTP test
+Doing read-only test
+Using Special distribution (12 iterations,  1 pct of values are returned in 75 pct cases)
+Using "BEGIN" for starting transactions
+Using auto_inc on the id column
+Threads started!
+Time limit exceeded, exiting...
+(last message repeated 7 times)
+Done.
+
+OLTP test statistics:
+    queries performed:
+        read:                            173670
+        write:                           0
+        other:                           24810
+        total:                           198480
+    transactions:                        12405  (206.65 per sec.)
+    deadlocks:                           0      (0.00 per sec.)
+    read/write requests:                 173670 (2893.17 per sec.)
+    other operations:                    24810  (413.31 per sec.)
+
+Test execution summary:
+    total time:                          60.0276s
+    total number of events:              12405
+    total time taken by event execution: 479.7905
+    per-request statistics:
+         min:                                  9.17ms
+         avg:                                 38.68ms
+         max:                                164.02ms
+         approx.  95 percentile:              58.40ms
+
+Threads fairness:
+    events (avg/stddev):           1550.6250/36.40
+    execution time (avg/stddev):   59.9738/0.01
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 8
+
+Doing OLTP test.
+Running mixed OLTP test
+Doing read-only test
+Using Special distribution (12 iterations,  1 pct of values are returned in 75 pct cases)
+Using "BEGIN" for starting transactions
+Using auto_inc on the id column
+Threads started!
+Time limit exceeded, exiting...
+(last message repeated 7 times)
+Done.
+
+OLTP test statistics:
+    queries performed:
+        read:                            155652
+        write:                           0
+        other:                           22236
+        total:                           177888
+    transactions:                        11118  (185.19 per sec.)
+    deadlocks:                           0      (0.00 per sec.)
+    read/write requests:                 155652 (2592.69 per sec.)
+    other operations:                    22236  (370.38 per sec.)
+
+Test execution summary:
+    total time:                          60.0350s
+    total number of events:              11118
+    total time taken by event execution: 479.8114
+    per-request statistics:
+         min:                                 13.25ms
+         avg:                                 43.16ms
+         max:                                115.58ms
+         approx.  95 percentile:              63.94ms
+
+Threads fairness:
+    events (avg/stddev):           1389.7500/22.02
+    execution time (avg/stddev):   59.9764/0.01
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 8
+
+Doing OLTP test.
+Running mixed OLTP test
+Doing read-only test
+Using Special distribution (12 iterations,  1 pct of values are returned in 75 pct cases)
+Using "BEGIN" for starting transactions
+Using auto_inc on the id column
+Threads started!
+Time limit exceeded, exiting...
+(last message repeated 7 times)
+Done.
+
+OLTP test statistics:
+    queries performed:
+        read:                            149954
+        write:                           0
+        other:                           21422
+        total:                           171376
+    transactions:                        10711  (178.40 per sec.)
+    deadlocks:                           0      (0.00 per sec.)
+    read/write requests:                 149954 (2497.66 per sec.)
+    other operations:                    21422  (356.81 per sec.)
+
+Test execution summary:
+    total time:                          60.0378s
+    total number of events:              10711
+    total time taken by event execution: 479.8359
+    per-request statistics:
+         min:                                 13.92ms
+         avg:                                 44.80ms
+         max:                                128.77ms
+         approx.  95 percentile:              65.93ms
+
+Threads fairness:
+    events (avg/stddev):           1338.8750/25.45
+    execution time (avg/stddev):   59.9795/0.01
+

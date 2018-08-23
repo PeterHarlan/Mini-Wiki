@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for x in 1 2 4 8 16 32
+do
+  sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=wku2000 --db-driver=mysql prepare
+  sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=$x run > sqltest$x.txt
+  sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=$x run >> sqltest$x.txt
+  sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=yourrootsqlpassword --max-time=60 --oltp-read-only=on --max-requests=0 --num-threads=$x run >> sqltest$x.txt
+  sysbench --test=oltp --mysql-db=test --mysql-user=root --mysql-password=wku2000 --db-driver=mysql cleanup
+done

@@ -1,0 +1,3 @@
+sudo docker run --name mysql -d -p 3306:3306 -v /home/pi/.local/share/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=wku2000 tobi312/rpi-mysql
+
+sudo docker exec mysql sh -c 'exec mysqldump --all-databases -uroot -p"wku2000"' > localhost.sql
