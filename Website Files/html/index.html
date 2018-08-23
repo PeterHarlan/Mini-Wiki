@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  
+    <meta name="description" content="Mini WKU Wiki: buildings, resources, teachers, campus, and many more...">
+    <meta name="keywords" content="wiki, mini, wku, wikipedia, buildings, academics, college, bowling green, kentucky, ky, bg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WKU WIKI</title>
+	  
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  </head>
+
+  <!--*********************************************-->
+  <!--onload calls the java script when the webpage is loaded-->
+  <body onload="loadFunctions()">
+
+    <!--Custom CSS-->
+    <style>
+      /*resize the content to the screen*/
+      @media only screen and (min-width: 576px) {
+        .box{
+          width: 60%;
+        }
+      }
+    </style>
+
+    <!--Navigation-->
+    <!--Add navbar-light bg-faded  to make navbar visiable-->
+    <nav class="navbar fixed-top align-items-end">
+        <!-- navBar Name-->
+         <!-- <a class="navbar-brand" href="#">WKU Wiki</a> -->
+
+        <div class="btn-group ml-auto">
+          <!--Button for dropdown-->
+
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnHolderName"></button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class = "mx-2" >
+              <button class="dropdown-item" type="button" id="CreatePage" onclick="createPageLink()" style="display: none;">Create Page</button>
+                <button class="dropdown-item example" type="button" id="SignOut" style="display: none;" onclick="logOut()">Sign Out</button>
+                <input  class="dropdown-item form-control" type="text" id="Email" placeholder="email">
+                <input  class="dropdown-item form-control" type="password" id="Password" placeholder="password" >
+                <button class="dropdown-item " type="button" id="LogIn" onclick="submitLogin()">Log In</button>
+                <button class="dropdown-item" type="button" id="SignUp" onclick="signUp()">Sign Up</button>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    
+    <!--Search page conent flex from top of the screen to the bottom-->
+    <div class="container-fluid d-flex" style=" height: 100vh; ">
+      <!--Align the child container to the parent-->
+      <div class="container align-self-center">
+        <!-- Hold search image-->
+        <img src="img/search.jpg" class ="img-fluid mx-auto d-block box" alt="Search Image">
+        <form name="search_box" method="get" action="searchResults.php">
+          <!-- Center the childern -->
+          <center>
+            <!--Search Bar-->
+            <div class="input-group box mt-3" name="search_box">
+              <input type="text" id="srchBox" class="form-control" placeholder="Search" aria-describedby="basic-addon2" name="search" >
+              <!--Search Button-->
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button" onclick="searchBarClicked()"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </span>
+            </div>
+
+            <div class="mt-3">
+              <button type="button" class="btn btn-secondary btn-sm hidden-xs-down" onclick="viewWKU()">Western Kentucky University</button>
+              <button type="button" class="btn btn-secondary btn-sm hidden-xs-down">TCCW</button>
+              <button type="button" class="btn btn-secondary btn-sm hidden-xs-down">Diddle Arena</button>
+              <button type="button" class="btn btn-secondary btn-sm hidden-md-down">Mass Media</button>
+              <button type="button" class="btn btn-secondary btn-sm hidden-md-down">Snell</button>
+              <button type="button" class="btn btn-secondary btn-sm hidden-lg-down">Cravens Library</button>
+            </div>
+          </center>
+        </form>
+      </div>
+    </div>
+         
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Create custom javascript for this page  - Includes login Ajax function-->
+    <script src='js/login.js'></script>
+    <script src='js/loginpage.js'></script>
+  </body>
+</html>

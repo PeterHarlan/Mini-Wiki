@@ -1,0 +1,138 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Edit Page</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+  </head>
+
+  <!--*********************************************-->
+  <!--onload calls the java script when the webpage is loaded-->
+  <body onload="getFocus()">
+
+    <!--Create custom javascript for this page-->
+    <script type="text/javascript">
+        //a method that focus the user's cuser to the search box 
+        function getFocus()
+        {
+          document.search_box.search.focus();
+        }
+
+        function signUp()
+        {
+          location.href = "signUp.html";
+        }
+        
+        //Log in button toggle
+        function logInToggle()
+        {
+          var a = document.getElementById('LogIn');
+          var b = document.getElementById('LogOut');
+          display(a);
+          display(b);
+        }
+
+        //Function to toggle display of the buttons
+        function display(x)
+        {
+          if (x.style.display === 'none') {
+            x.style.display = 'block';
+          } else {
+            x.style.display = 'none';
+          }
+        }
+      </script>
+
+      <!--Custom CSS-->
+      <!-- <style type="text/css"> </style> -->
+
+      <!--Navigation-->
+      <!--Add navbar-light bg-faded to make navbar visiable-->
+      <nav class="navbar align-items-end navbar-light bg-faded">
+        <!-- navBar Name-->
+        <!-- <a class="navbar-brand" href="#">WKU Wiki</a> -->
+
+        <div class="btn-group ml-auto">
+          <!--Button for dropdown-->
+
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Joe Mama </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class = "mx-2" >
+              <div id = "LogIn">
+                <input  class="dropdown-item form-control" type="text" id="Email" placeholder="email">
+                <input  class="dropdown-item form-control" type="password" id="Password" placeholder="password" >
+                <button class="dropdown-item " type="button"  onclick="logInToggle()">Log In</button>
+                <button class="dropdown-item" type="button" id="SignUp" onclick="signUp()">Sign Up</button>
+              </div>
+              <div id = "LogOut" style="display: none;">
+                <button class="dropdown-item" type="button" id="CreatePage">Create Page</button>
+                <button class="dropdown-item example" type="button" id="SignOut" onclick="logInToggle()">Sign Out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!--Topic header-->
+     <!--  <div class="container mt-3">
+        <h1><b>Edit Page</b></h1>
+        <div class="container">
+        </div>
+      </div> -->
+
+      <div class="container-fluid d-flex" style=" height: 100vh; ">
+        <!--Align the child container to the parent-->
+
+        <div class="container mt-3">
+          <form>
+            <div class="form-group">
+              <div class="row">
+                <div class="col col-sm-12">
+                  <div class="mt-3"><h1><b>Page Subject</b></h1></div>
+                  <input type="text" class="form-control mb-2" id="firstName" placeholder="Page Subject">
+                </div>
+
+                <div class="col-sm-12 mt-3">
+                  <h2>Topic One</h2>
+                  <input type="text" class="form-control" id="firstName" placeholder="Supporting Topic">
+                  <div class="form-group floating-label-form-group controls mt-2">
+                      <!-- <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                      <p class="help-block text-danger"></p> -->
+                    <textarea class="form-control" placeholder="Supporting Content"></textarea>
+                    <button type="button" class="btn btn-light btn-sm float-right mt-1"><b> + </b></button>
+                  </div>
+                  <button class="btn btn-success mr-auto" type="submit"><b>Submit!</b></button>
+                </div>
+
+                <!-- <div class="col-sm-12 mt-3">
+                  <h2>Topic Two</h2>
+                  <input type="text" class="form-control" id="firstName" placeholder="Supporting Topic">
+                  <div class="form-group floating-label-form-group controls mt-2">
+                    <textarea class="form-control" placeholder="Supporting Content"></textarea>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+
+          </form>
+
+          
+        </div><!--container mt-3-->
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+      </body>
+      </html>

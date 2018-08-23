@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+  <html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Page Information</title>
+
+    <!-- Bootstrap -->
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+	<!-- Font Awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Create custom javascripts for this page  - Includes login Ajax function-->
+	<script src='js/login.js'></script>
+	<script src='js/viewPage.js'></script>
+
+
+  </head>
+
+  <!--*********************************************-->
+  <!--onload calls the java script when the webpage is loaded-->
+  <body onload='loadFunctions()'>
+      <!--Custom CSS-->
+      <style type='text/css'> 
+
+       /*Removes underline and set color to link as black*/
+       a:link {color: #3FA0D6; text-decoration: none}      /* unvisited link */
+       a:visited {color: black; text-decoration: none}   /* visited link */
+       a:hover {color: #3FA0D6; text-decoration: none}     /* mouse over link */
+       a:active {color: #3FA0D6; text-decoration: none} 
+       .heading {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+		
+      }
+      .paragraph{
+        text-align: justify; 
+        /*Indent paragraph text*/
+        text-indent: 3em
+      }
+    </style>
+
+    <!--Navigation-->
+    <!--Add navbar-light bg-faded to make navbar visiable-->
+    <nav class='navbar align-items-end navbar-light bg-faded '>
+      <!-- navBar Name-->
+      <a class='navbar-brand tag' href='index.html''>WKU Wiki</a>
+      <!-- <a class='navbar-brand' href='#'>WKU Wiki</a> -->
+
+      <div class='btn-group ml-auto'>
+        <!--Button for dropdown-->
+
+        <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Joe Mama </button>
+        <div class='dropdown-menu dropdown-menu-right'>
+          <div class = 'mx-2' >
+            <div id = 'LogIn'>
+              <input  class='dropdown-item form-control' type='text' id='Email' placeholder='email'>
+              <input  class='dropdown-item form-control' type='password' id='Password' placeholder='password' >
+              <button class='dropdown-item ' type='button'  onclick='logInToggle()'>Log In</button>
+              <button class='dropdown-item' type='button' id='SignUp' onclick='signUp()'>Sign Up</button>
+            </div>
+            <div id = 'LogOut' style='display: none;'>
+              <button class='dropdown-item' type='button' id='CreatePage'>Create Page</button>
+              <button class='dropdown-item example' type='button' id='SignOut' onclick='logInToggle()'>Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+	<!-- Search Bar -->
+    <div class='container mt-3'>
+		<form name="search_box">
+			<!-- Center the childern -->
+			<center>
+				<!--Search Bar-->
+				<div class="input-group box mt-3" name="search_box">
+				  <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2" name="search" >
+				  <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+				</div>
+				
+			</center>
+			<span class = "text-muted"><b>Search Results:</b> 3 <b>Last Updated:</b> 11/27/2017, 6:36:17 PM</span>
+			<span class = "text-muted"></span>
+        </form>
+    </div>
+	
+	<div class = "container mt-3">
+		<a href='viewPage.php?pageID=5' class='heading mb-0'>DSU</a>
+		<p>Located in the center of WKU, the Downing Student Union is truly the crossroads of WKU activities. Constructed in 1970, the building was named after former Western Kentucky University president, Dr. Dero Downing. Today, the facility houses auxiliary and academic support services, is...</p>
+    </div>
+	
+	<div class = "container mt-3">
+		<a href='viewPage.php?pageID=5' class='heading mb-0'>Helm Library</a>
+		<p>Located in the center of WKU, the Downing Student Union is truly the crossroads of WKU activities. Constructed in 1970, the building was named after former Western Kentucky University president, Dr. Dero Downing. Today, the facility houses auxiliary and academic support services, is...</p>
+    </div>
+	<div class = "container mt-3">
+		<a href='viewPage.php?pageID=5' class='heading mb-0'>Mass Media</a>
+		<p>Located in the center of WKU, the Downing Student Union is truly the crossroads of WKU activities. Constructed in 1970, the building was named after former Western Kentucky University president, Dr. Dero Downing. Today, the facility houses auxiliary and academic support services, is...</p>
+    </div>
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src='js/bootstrap.min.js'></script>
+
+  </body>
+  </html>

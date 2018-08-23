@@ -1,0 +1,235 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Helm Library</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+  </head>
+
+  <!--*********************************************-->
+  <!--onload calls the java script when the webpage is loaded-->
+  <body onload="">
+
+    <!--Create custom javascript for this page-->
+    <script type="text/javascript">
+        //a method that focus the user's cuser to the search box 
+        function getFocus()
+        {
+          document.search_box.search.focus();
+        }
+
+        function signUp()
+        {
+          location.href = "signUp.html";
+        }
+        
+        //Log in button toggle
+        function logInToggle()
+        {
+          var a = document.getElementById('LogIn');
+          var b = document.getElementById('LogOut');
+          display(a);
+          display(b);
+        }
+
+        //Function to toggle display of the buttons
+        function display(x)
+        {
+          if (x.style.display === 'none') {
+            x.style.display = 'block';
+          } else {
+            x.style.display = 'none';
+          }
+        }
+      </script>
+
+      <!--Custom CSS-->
+      <style type="text/css"> 
+
+       /*Removes underline and set color to link as black*/
+       a:link {color: black; text-decoration: none}      /* unvisited link */
+       a:visited {color: black; text-decoration: none}   /* visited link */
+       a:hover {color: black; text-decoration: none}     /* mouse over link */
+       a:active {color: black; text-decoration: none} 
+       .heading {
+        font-size: 32px;
+        font-style: italic;
+        display: block;
+      }
+      .paragraph{
+        text-align: justify; 
+        /*Indent paragraph text*/
+        text-indent: 3em
+      }
+    </style>
+
+    <!--Navigation-->
+    <!--Add navbar-light bg-faded to make navbar visiable-->
+    <nav class="navbar align-items-end navbar-light bg-faded">
+      <!-- navBar Name-->
+      <!-- <a class="navbar-brand" href="#">WKU Wiki</a> -->
+
+      <div class="btn-group ml-auto">
+        <!--Button for dropdown-->
+
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Joe Mama </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class = "mx-2" >
+            <div id = "LogIn">
+              <input  class="dropdown-item form-control" type="text" id="Email" placeholder="email">
+              <input  class="dropdown-item form-control" type="password" id="Password" placeholder="password" >
+              <button class="dropdown-item " type="button"  onclick="logInToggle()">Log In</button>
+              <button class="dropdown-item" type="button" id="SignUp" onclick="signUp()">Sign Up</button>
+            </div>
+            <div id = "LogOut" style="display: none;">
+              <button class="dropdown-item" type="button" id="CreatePage">Create Page</button>
+              <button class="dropdown-item example" type="button" id="SignOut" onclick="logInToggle()">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 
+    !!!Notes!!!
+    Make sure you rename href in the header and the id in the body
+    both "xxx" should be replaced
+    "Header Text" should be replaced by the name of the header
+
+    This is the heading 
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#xxx" class="heading mb-0">Header Text</a>
+      </div>
+    </div>
+
+    Body Begins here
+    <div id="xxx" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div> 
+    -->
+
+
+
+    <!--Topic header-->
+    <h1><b>Helm Library</b></h1>
+    <div class="container mt-3">
+
+      <p class="paragraph mt-3"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <!--Card 1 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card1" class="heading mb-0">History</a>
+      </div>
+    </div>
+    <!--Card 1 Body-->
+    <div id="card1" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+      <!--Nested Card Example-->
+      <div class="card">
+        <div class="card-header">
+          <a data-toggle="collapse" href="#card1a" class="heading mb-0">Ancient</a>
+        </div>
+      </div>
+
+      <div id="card1a" class="container collapse">
+        <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a data-toggle="collapse" href="#card1b" class="heading mb-0">Modern</a>
+        </div>
+      </div>
+
+      <div id="card1b" class="container collapse">
+        <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      </div>
+
+    </div>
+
+    <!--Card 2 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card2" class="heading mb-0">Teachers</a>
+      </div>
+    </div>
+    <!--Card 2 Body-->
+    <div id="card2" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <!--Card 3 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card3" class="heading mb-0">Resources</a>
+      </div>
+    </div>
+    <!--Card 3 Body-->
+    <div id="card3" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <!--Card 4 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card4" class="heading mb-0">Bathrooms</a>
+      </div>
+    </div>
+    <!--Card 4 Body-->
+    <div id="card4" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <!--Card 5 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card5" class="heading mb-0">Chinese</a>
+      </div>
+    </div>
+    <!--Card 5 Body-->
+    <div id="card5" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+    <!--Card 6 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card6" class="heading mb-0">Computers</a>
+      </div>
+    </div>
+    <!--Card 6 Body-->
+    <div id="card6" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+      </p>
+
+    </div>
+    <!--Card 6 Header-->
+    <div class="card">
+      <div class="card-header">
+        <a data-toggle="collapse" href="#card7" class="heading mb-0">Homework</a>
+      </div>
+    </div>
+    <!--Card 6 Body-->
+    <div id="card7" class="container collapse">
+      <p class="paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+  </html>

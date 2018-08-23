@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="wikipedia for wku">
+  <meta name="keywords" content="wiki, mini, wku, wikipedia, buildings, academics, college, bowling green, kentucky, ky, bg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Admin Stats</title>
+
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+  <!--Create custom javascripts for this page  - Includes login Ajax function-->
+	<script src='js/login.js'></script>
+	<script src='js/adminStatsPage.js'></script>
+
+
+</head>
+
+<!--*********************************************-->
+<!--onload calls the java script when the webpage is loaded-->
+<body onload="loadFunctions() ">
+
+  <!--This style scales the size of the flex to 50% on small screens-->
+  <style>
+    @media only screen and (min-width: 768px) {
+      .box{
+        /*background-color: lightblue;*/
+        height: 100vh;
+      }
+	  .scaleText
+	  {
+		font-weight: bold;
+	  }
+    }
+	@media only screen and (max-width: 768px) {
+      .box{
+        /*background-color: lightblue;*/
+        height: 50vh;
+      }
+	  .scaleText
+	  {
+		font-size: 40px;
+	  }
+    }
+
+  </style>
+
+  <!--Custom CSS-->
+  <!-- <style type="text/css"> </style> -->
+
+  <!--Navigation-->
+  <!--Add navbar-light bg-faded  to make navbar visiable-->
+  <nav class="navbar fixed-top align-items-end">
+    <!-- navBar Name-->
+    <!-- <a class="navbar-brand" href="#">WKU Wiki</a> -->
+
+    <div class="btn-group ml-auto">
+      <!--Button for dropdown-->
+
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnHolderName"><i class="fa fa-user-secret" aria-hidden="true"></i></button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class = "mx-2" >
+          <input  class="dropdown-item form-control" type="text" id="Email" placeholder="email">
+              <input  class="dropdown-item form-control" type="password" id="Password" placeholder="password" >
+              <button class="dropdown-item " type="button" id="LogIn" onclick="submitLogin()">Log In</button>
+              <button class="dropdown-item" type="button" id="SignUp" onclick="signUp()">Sign Up</button>
+              <button class="dropdown-item" type="button" id="CreatePage" onclick="createPageLink()" style="display: none;">Create Page</button>
+              <button class="dropdown-item example" type="button" id="SignOut" style="display: none;" onclick="logOut()">Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container-fluid">
+    <div class = "row">
+      <!--Cell A-->
+      <div class="col-md-6 box" >
+      <!--Create nested row to Cell A-->
+        <div class="row d-flex align-items-stretch box">
+        <!--Nested cell A, flex top-->
+         <div class="align-self-start col-sm-12 mt-5" style="color: gray;">
+          <h1 align="center">
+            <i class="fa fa-user-o" aria-hidden="true"></i> TOTAL USERS</h1>
+          </div>
+          <!--Nested cell B, flex center-->
+          <div class="align-self-center col-sm-12" style="font-size: 70px; color: gray;">
+            <p class = "scaleText" id= "totalUserCounter" align="center"></p>
+          </div>
+          <!--Nested cell C, flex bottom-->
+          <div class="align-self-end col-sm-12 mb-5" style="color: gray;">
+            <p id="lblLastUpdate" align="center"><i></i></p>
+          </div>
+        </div><!--Nested row to cell A-->
+      </div><!--Outer cell A-->
+      <!--Cell B-->
+      <div class="col-md-6 box" style="background: gray" >
+      <!--Create nested row to Cell B-->
+       <div class="row d-flex align-items-stretch box">
+         <!--Nested cell A, flex top-->
+         <div class="align-self-start col-sm-12 mt-5" style="color: white;">
+          <h1 align="center">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Top Page</h1>
+          </div>
+          <!--Nested cell B, flex center-->
+          <div class="align-self-center col-sm-12" style="font-size: 70px; color: white;">
+            <p class = "scaleText"id="lblTopPage" align="center" "></p>
+          </div>
+          <!--Nested cell C, flex bottom-->
+          <div class="align-self-end col-sm-12 mb-5" style="color: white;">
+            <p id="lblPageViewCount" align="center"><i><b>Times Viewed: </b></i></p>
+          </div>
+        </div><!--Nested row to cell B-->
+      </div><!--Outer cell B-->
+    </div><!--Outer most row-->
+  </div><!--Oouter most container-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

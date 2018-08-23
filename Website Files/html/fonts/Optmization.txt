@@ -1,0 +1,5 @@
+For a font to load, modern browsers just need woff file. So other files such as woff2, ttf, eot, svg are not necessary. So delete all these files from the fonts folder and leave only .woff.
+
+https://icomoon.io/app/#/select
+
+https://github.com/FortAwesome/Font-Awesome/wiki/Customize-Font-Awesome

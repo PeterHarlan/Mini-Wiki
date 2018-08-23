@@ -1,4 +1,4 @@
-This project is a sample website project which relies on the Bootstrap framework, PHP, and js. 
+This project is a sample website project (a mini Wiki) which relies on the Bootstrap framework, PHP, and js. 
 
 File System:
 

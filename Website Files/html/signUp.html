@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+	<!--  Script that holds the submit registration Ajax JS Function-->
+	<script src='js/register.js'></script>
+	
+    <title>WKU Sign Up</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+
+  </head>
+
+  <!--*********************************************-->
+  <!--onload calls the java script when the webpage is loaded-->
+  <body onload="getFocus()">
+
+    <!--Create custom javascript for this page-->
+    <script type="text/javascript">
+      //a method that focus the user's cuser to the search box 
+      function getFocus()
+      {
+        document.getElementById("firstName").focus();
+      }
+    </script>
+
+    <!--Custom CSS-->
+    <!-- <style type="text/css"> </style> -->
+
+   
+
+    
+    <!--Search page conent flex from top of the screen to the bottom-->
+    <div class="container-fluid d-flex" style=" height: 100vh; ">
+      <!--Align the child container to the parent-->
+      <div class="container align-self-center">
+        <form>
+          <div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 offset-md-3" >
+                  <!--Heading-->
+                  <div class="mb-3"><h1><b>Sign Up</b></h1></div>
+                  <!--Name-->
+                  <div class="row ">
+                     <div class="col-md-6 mb-3">
+                      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <input type="text" class="form-control" id="lastName"  placeholder="Last Name">
+                    </div>
+                  </div>
+                  <!--email-->
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email"  placeholder="address@email.com">
+					 <small id="emailHelp" class="form-text text-muted">Please use appropriate email</small>
+                  </div>
+                  <!--Password-->
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password"  placeholder="Password">
+					<small id="passwordHelpBlock" class="form-text text-muted">8-20 characters long, contain letters, special character, and numbers.</small>
+				  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="confirmPassword"  placeholder="Confirm Password">
+					<small id="passwordHelpBlock" class="form-text text-muted">Does not match</small>
+				  </div>
+                  <!--Buttons-->
+                  <!-- <button  class="btn btn-danger mx-auto d-block" type="button">Sign In</button> -->
+                  <button type="button" class= "btn btn-success mx-auto d-block" onClick="submitReg()">Sign Up</button>
+                </div> <!--col-md-6 offset-md-3-->
+              </div><!--row-->
+            </div><!--container-->
+          </div><!--form-group-->
+        </form>
+      </div><!--container -->
+    </div><!--container-fluid-->
+         
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
